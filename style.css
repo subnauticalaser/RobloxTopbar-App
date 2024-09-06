@@ -1,0 +1,152 @@
+.RobloxTopbarAPP {
+    height: 44px;
+    width: 44px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 100%;
+}
+
+.RobloxTopbarAPP:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.RobloxTopbarAPP:hover .Middle {
+    fill: rgba(0, 0, 0, 0.7);
+}
+
+
+.RobloxTopbarAPP-Unibar {
+    position: relative;
+    height: 44px;
+    width: 44px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 32px;
+    margin: 0px 11px;
+    display: flex;
+    gap: 5px;
+}
+
+
+
+
+
+
+.RobloxTopbarAPP-Sorter {
+    background: transparent;
+    display: flex;
+}
+
+
+.RobloxTopbarAPP-Sorter .RobloxTopbarAPP-Unibar .RobloxTopbarAPP-Unibar-Open-Close-Button {
+    position: relative;
+    background-color: transparent;
+    height: 33px;
+    width: 33px;
+    color: white;
+    top: 12.5%;
+    left: 6px;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+.RobloxTopbarAPP-Sorter .RobloxTopbarAPP-Unibar .RobloxTopbarAPP-Unibar-Open-Close-Button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+.RobloxTopbarAPP .RobloxTopbarAPP-Unibar .RobloxTopbarAPP-Unibar-ButtonsContainer {
+    position: absolute;              /* Absolute positioning relative to the parent */
+    top: 100%;                       /* Position below the button */
+    left: 50%;                       /* Center horizontally relative to the parent */
+    transform: translateX(-50%);    /* Center alignment adjustment */
+    width: 33px;                    /* Fixed width to match the button */
+    max-height: 0;                  /* Start with a collapsed height */
+    overflow: hidden;               /* Hide overflow content during collapse */
+    transition: max-height 0.4s ease, opacity 0.4s ease; /* Smooth animation */
+    opacity: 0;
+    display: flex;                  /* Flex container for buttons */
+    /*flex-direction: column;         /* Stack buttons vertically */
+    gap: 1px;  
+}
+
+/* Expanded state for Buttons Container */
+.RobloxTopbarAPP .RobloxTopbarAPP-Unibar .RobloxTopbarAPP-Unibar-ButtonsContainer.show {
+    max-height: 150px;             /* Expand to fit content */
+    opacity: 1;
+}
+
+
+
+
+
+
+
+.RobloxTopbarAPP-Sorter .RobloxTopbarAPP-Unibar .RobloxTopbarAPP-Unibar-ButtonsContainer button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+.RobloxTopbarAPP-Sorter .RobloxTopbarAPP-Unibar .DividerForSpacing {
+    position: relative;
+    height: 33px;
+    width: 9px;
+    top: 12.5%;
+    left: 6px;
+    z-index: 2;
+    border-radius: 100%;
+    visibility: hidden;
+}
+
+/* Ensure the unibar allows overflow and does not constrain its content */
+.RobloxTopbarAPP-Sorter .RobloxTopbarAPP-Unibar {
+    overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+    white-space: nowrap; /* Prevent wrapping of child elements */
+    position: relative; /* Allow for absolute positioning of children if needed */
+    display: flex;
+}
+
+/* Ensure the button container can exceed the width of its parent */
+.RobloxTopbarAPP-Sorter .RobloxTopbarAPP-Unibar .RobloxTopbarAPP-Unibar-ButtonsContainer {
+    display: flex; /* Use flexbox to align items horizontally */
+    flex-direction: row; /* Arrange items in a row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of buttons */
+    width: auto; /* Allow container width to expand based on content */
+    gap: 3px; /* Add spacing between buttons */
+    height: auto;
+}
+
+/* Ensure buttons are properly sized and do not shrink */
+.RobloxTopbarAPP-Sorter .RobloxTopbarAPP-Unibar .RobloxTopbarAPP-Unibar-ButtonsContainer button {
+    background-color: transparent;
+    height: 40px; /* Fixed height for consistency */
+    width: auto; /* Allow width to be determined by content */
+    /*min-width: 33px; /* Ensure buttons have a minimum width */
+    color: white;
+    border-radius: 32px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Custom scrollbar styles */
+.RobloxTopbarAPP-Sorter .RobloxTopbarAPP-Unibar .RobloxTopbarAPP-Unibar-ButtonsContainer::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.RobloxTopbarAPP-Sorter .RobloxTopbarAPP-Unibar .RobloxTopbarAPP-Unibar-ButtonsContainer::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.RobloxTopbarAPP-Sorter .RobloxTopbarAPP-Unibar .RobloxTopbarAPP-Unibar-ButtonsContainer::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
